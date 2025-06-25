@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/Css/style1.css">
+</head>
+
+<body>
+
+
+
+
+    <div class="container" id="adminPanel">
+        <h2>Admin Panel</h2>
+        <label for="gradeSelection">Select Grade to Manage:</label>
+        <select id="gradeSelection" onchange="loadPasswords()">
+            <option value="12">Grade 12</option>
+            <option value="11">Grade 11</option>
+        </select>
+
+        <label for="adminPasswords">Paste 12-digit Passwords:</label>
+        <textarea id="adminPasswords" rows="5" placeholder="Paste passwords here..." oninput="validatePasswords()"></textarea>
+
+        <button onclick="addPasswords()">Add Passwords</button>
+
+        <h3>Real-Time Validation</h3>
+        <ul id="validationList"></ul>
+
+        <h3>Stored Passwords</h3>
+        <ul id="passwordList"></ul>
+
+        <button onclick="copyAllPasswords()">Copy All Passwords</button>
+        <button class="delete-btn" onclick="clearAllPasswords()">Clear All Passwords</button>
+    </div>
+
+    <script src="/Javascript/admin.js"></script>
+    <script src="/Javascript/json.js"></script>
+</body>
+
+</html>

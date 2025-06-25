@@ -1,0 +1,216 @@
+* {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    background: url(/img/background\ \(2\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    opacity: 2;
+}
+
+.container {
+    background: #210A79;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Responsive Text */
+
+h2,
+h4,
+label,
+a,
+.logo a,
+button,
+input,
+select,
+textarea {
+    font-size: clamp(14px, 2vw, 20px);
+    /* Adjusts text size based on screen width */
+}
+
+h2 {
+    color: white;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+select,
+input,
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn {
+    background-color: red;
+    font-size: clamp(12px, 1.5vw, 14px);
+    padding: 5px;
+    width: auto;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    gap: 30px;
+    padding: 5px;
+    justify-content: flex-end;
+}
+
+.navbar {
+    padding-left: 15px;
+    padding-right: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.navdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    padding: 20px;
+    animation: 2s fade;
+    transition: 1s;
+    font-family: 'Russo One';
+}
+
+.navdiv ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-item {
+    padding: 14px 20px;
+    color: #210A79;
+    text-align: center;
+    opacity: 0;
+}
+
+a {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+a::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: #210A79;
+    transform: scaleY(0);
+    z-index: -1;
+    transition: transform 0.45s;
+    border-radius: 10px;
+}
+
+a:hover {
+    color: white;
+    text-shadow: 0 0 10px, 0 0 10px, 0 0 10px
+}
+
+a:hover::after {
+    transform: scaleY(1);
+}
+
+.staff-hover {
+    position: relative;
+}
+
+.staff-hover .login-container {
+    position: absolute;
+    top: 50%;
+    left: -270px;
+    transform: translateY(-50%);
+    width: 250px;
+    background: #210A79;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+    z-index: 1000;
+}
+
+.staff-hover:hover .login-container {
+    display: flex;
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+.login-container input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 8px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: darkblue;
+}
+
+h4 {
+    color: white;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="/Css/styles1.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="">NOHS</a></div>
+            <nav>
+                <ul>
+                    <li class="staff-hover">
+                        <a href="#staff">STAFF</a>
+                        <div class="login-container">
+                            <h4>PASSCODE</h4>
+                            <input type="password" id="passcode" placeholder="Enter Passcode" />
+                            <button onclick="validatePasscode()">Login</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+
+
+    <div class="container" id="studentLogin">
+        <h2>Student Login</h2>
+        <label for="studentGrade">Select Grade:</label>
+        <select id="studentGrade">
+            <option value="12">Grade 12</option>
+            <option value="11">Grade 11</option>
+        </select>
+
+        <label for="studentPassword">LRN PASSWORD:</label>
+        <input type="password" id="studentPassword" placeholder="Enter password..." maxlength="12">
+
+        <button onclick="studentLogin()">Login</button>
+        <p id="loginMessage"></p>
+    </div>
+
+    <script src="/Javascript/student.js"></script>
+    <script src="/Javascript/json.js"></script>
+
+</body>
+
+</html>
